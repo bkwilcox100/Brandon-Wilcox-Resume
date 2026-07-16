@@ -1,4 +1,11 @@
 title: Brandon Wilcox
 description: Notes on what I'm building.
 url: https://brandonwilcox.com
-permalink: /blog/:title/
+
+# scoped to posts: a bare top-level `permalink` rewrites pages too
+defaults:
+  - scope:
+      type: posts
+    values:
+      permalink: /blog/:title/
+      layout: post
